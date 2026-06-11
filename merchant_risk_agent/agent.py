@@ -18,7 +18,12 @@ from __future__ import annotations
 
 import os
 
+from dotenv import load_dotenv
 from google.adk.agents import Agent
+
+# Read GOOGLE_API_KEY (and any overrides) from a .env file at the project root,
+# so both `adk web` and the FastAPI server pick up your key automatically.
+load_dotenv()
 
 from .schemas import output_format_instructions
 from .tools import (
