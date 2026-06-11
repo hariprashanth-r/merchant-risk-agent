@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merchant Risk Console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead__mark">MR</div>
+    <div>
+      <h1>Merchant Risk Console</h1>
+      <p class="masthead__sub">Know-Your-Business investigation &amp; onboarding verdict</p>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- Intake -->
+    <section class="panel intake" aria-label="New investigation">
+      <h2 class="panel__title">Open a case</h2>
+      <label class="field">
+        <span>Merchant legal name</span>
+        <input id="merchantName" type="text" placeholder="Acme Trading LLC" autocomplete="off" />
+      </label>
+      <label class="field">
+        <span>Website</span>
+        <input id="website" type="text" placeholder="example-shop.com" autocomplete="off" />
+      </label>
+      <button id="runBtn" class="run">Run investigation</button>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- Verdict -->
+    <section class="panel result" aria-label="Verdict" id="result" hidden>
+      <div class="verdict">
+        <div class="stamp" id="stamp">—</div>
+        <div class="gauge">
+          <div class="gauge__head">
+            <span class="gauge__label">Risk score</span>
+            <span class="gauge__value" id="scoreValue">0</span>
+          </div>
+          <div class="gauge__track"><div class="gauge__fill" id="scoreFill"></div></div>
+          <div class="gauge__scale"><span>0 clean</span><span>100 severe</span></div>
+        </div>
+      </div>
+
+      <p class="summary" id="summary"></p>
+
+      <h3 class="flags__title">Evidence &amp; flags</h3>
+      <ul class="flags" id="flags"></ul>
+    </section>
+
+    <!-- History -->
+    <section class="panel history" aria-label="Recent cases">
+      <h2 class="panel__title">Recent cases</h2>
+      <ul class="caselist" id="caselist"><li class="caselist__empty">No cases yet.</li></ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    A learning project &middot; the agent recommends, a human decides &middot;
+    not a substitute for licensed compliance review
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
