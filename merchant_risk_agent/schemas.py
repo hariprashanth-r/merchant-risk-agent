@@ -76,3 +76,9 @@ def output_format_instructions() -> str:
         "If a tool could not return data, do not invent it. Record the gap as a "
         "low-severity flag instead."
     )
+
+if __name__ == "__main__":
+    r = RiskReport(merchant_name="Test Co", website="test.com",
+                   risk_score=40, risk_level="high",
+                   recommendation="review", summary="A borderline case.")
+    print(r.model_dump_json(indent=2))

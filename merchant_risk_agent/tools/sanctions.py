@@ -75,3 +75,7 @@ def check_sanctions(name: str) -> dict:
         "match_found": bool(matches),
         "matches": matches[:5],
     }
+
+if __name__ == "__main__":
+    import json
+    print(json.dumps(check_sanctions("Redline Arms"), indent=2))

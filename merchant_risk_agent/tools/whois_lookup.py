@@ -69,3 +69,8 @@ def whois_lookup(domain: str) -> dict:
         "age_days": age_days,
         "registrar": registrar,
     }
+
+
+if __name__ == "__main__":
+    import json
+    print(json.dumps(whois_lookup("github.com"), indent=2))

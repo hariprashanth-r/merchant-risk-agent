@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Acme Sanctioned Holdings",
+    "website": "https://example.com",
+    "expected_recommendation": "decline",
+    "hard_stop": true,
+    "note": "Name is on the sample sanctions list — a hard stop, must be declined."
+  },
+  {
+    "name": "Maria Testperson",
+    "website": "https://example.com",
+    "expected_recommendation": "decline",
+    "hard_stop": true,
+    "note": "Sanctioned individual in the sample list — must be declined."
+  },
+  {
+    "name": "Blue Bottle Coffee",
+    "website": "https://bluebottlecoffee.com",
+    "expected_recommendation": "approve",
+    "hard_stop": false,
+    "note": "Established coffee retailer, old domain, no sanctions — should approve."
+  },
+  {
+    "name": "GitHub",
+    "website": "https://github.com",
+    "expected_recommendation": "approve",
+    "hard_stop": false,
+    "note": "Well-known, long-established technology platform — should approve."
+  },
+  {
+    "name": "Generic Placeholder Store",
+    "website": "https://example.com",
+    "expected_recommendation": "review",
+    "hard_stop": false,
+    "note": "Placeholder page with no real products — thin content should trigger review."
+  }
+]

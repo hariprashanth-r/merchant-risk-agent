@@ -75,3 +75,4 @@ records are the app's responsibility.
   investigation happen instead of waiting.
 - **Human-in-the-loop**: route "review" verdicts to a queue a person clears.
 - **Persistent sessions + auth**: once more than one analyst uses it.
+  

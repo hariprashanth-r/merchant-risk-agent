@@ -52,3 +52,7 @@ def search_adverse_media(merchant_name: str) -> dict:
         "Treat this as 'no adverse media checked', not 'no adverse media found'.",
     }
     # ---- END ----
+
+if __name__ == "__main__":
+    import json
+    print(json.dumps(search_adverse_media("Blue Bottle Coffee"), indent=2))

@@ -72,3 +72,8 @@ def fetch_website(url: str) -> dict:
         "description": description,
         "text_excerpt": text[:_MAX_CHARS],
     }
+
+if __name__ == "__main__":
+    import json
+    result = fetch_website("https://example.com")
+    print(json.dumps(result, indent=2))
